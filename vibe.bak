@@ -28,6 +28,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:VibeSens
+LIBS:vibe-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -125,12 +127,6 @@ Text GLabel 2850 3500 3    60   Input ~ 0
 OUT
 Wire Wire Line
 	2850 3250 2850 3500
-Text GLabel 1600 2150 0    60   Input ~ 0
-VCC
-Text GLabel 2100 2150 2    60   Input ~ 0
-IN
-Wire Wire Line
-	1600 2150 2100 2150
 $Comp
 L Q_NMOS_GSD Q1
 U 1 1 5A3939D3
@@ -142,4 +138,19 @@ F 3 "" H 5200 2800 50  0001 C CNN
 	1    5200 2800
 	1    0    0    -1  
 $EndComp
+$Comp
+L VIBESENS VS1
+U 1 1 5A3D314C
+P 1650 3300
+F 0 "VS1" H 1300 3300 60  0000 C CNN
+F 1 "VIBESENS" H 2000 3300 60  0000 C CNN
+F 2 "" H 1800 3550 60  0001 C CNN
+F 3 "" H 1800 3550 60  0001 C CNN
+	1    1650 3300
+	1    0    0    -1  
+$EndComp
+Text GLabel 1950 3450 2    60   Input ~ 0
+IN
+Text GLabel 1250 3450 0    60   Input ~ 0
+VCC
 $EndSCHEMATC
